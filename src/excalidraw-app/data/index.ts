@@ -101,6 +101,10 @@ export const generateCollaborationLinkData = async () => {
 
   return { roomId, roomKey };
 };
+(window as any).getRandRoom = async () => {
+  const data = await generateCollaborationLinkData();
+  return `${location.protocol}//${location.host}/?#room=${data.roomId},${data.roomKey}`;
+};
 
 export const getCollaborationLink = (data: {
   roomId: string;
