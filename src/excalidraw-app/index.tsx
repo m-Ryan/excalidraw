@@ -582,22 +582,7 @@ const ExcalidrawWrapper = () => {
 
   const renderTopRightUI = useCallback(
     (isMobile: boolean, appState: AppState) => {
-      if (isMobile) {
-        return null;
-      }
-      return (
-        <div
-          style={{
-            width: "24ch",
-            fontSize: "0.7em",
-            textAlign: "center",
-          }}
-        >
-          {/* <GitHubCorner theme={appState.theme} dir={document.dir} /> */}
-          {/* FIXME remove after 2021-05-20 */}
-          {PlusLinkJSX}
-        </div>
-      );
+      return null;
     },
     [],
   );
